@@ -4,8 +4,7 @@ import "time"
 
 type User struct {
 	ID        uint      `json:"id" gorm:"primaryKey"`
-	Name      string    `json:"name"`
-	Email     string    `json:"email" gorm:"unique"`
+	Username  string    `json:"username"`
 	Password  string    `json:"password"`
 	Role      string    `json:"role"`
 	CreatedAt time.Time `json:"created_at"`

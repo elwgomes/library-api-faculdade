@@ -7,5 +7,5 @@ import (
 
 func main() {
 	db.ConnectDB()
-	log.Println("Application is running on...")
+	log.Println("Aplicação iniciada...")
 }
