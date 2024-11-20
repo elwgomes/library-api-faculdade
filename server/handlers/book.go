@@ -27,7 +27,7 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 }
 
 func GetAllBooks(w http.ResponseWriter, r *http.Request) {
-	var books models.Book
+	var books []models.Book
 	if result := db.DB.Preload("Author").Preload("Category").Find(&books); result.Error != nil {
 		http.Error(w, "Could not fetch books", http.StatusInternalServerError)
 		return
