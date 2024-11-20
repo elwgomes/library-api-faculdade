@@ -4,7 +4,7 @@ import "time"
 
 type Book struct {
 	ID          uint      `json:"id" gorm:"primaryKey"`
-	Title       string    `json:"title"`
+	Title       string    `json:"title" gorm:"unique"`
 	Description string    `json:"description"`
 	AuthorID    uint      `json:"author_id"`
 	Author      Author    `json:"author" gorm:"foreignKey:AuthorID"`

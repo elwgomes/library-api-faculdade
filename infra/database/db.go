@@ -27,6 +27,9 @@ func ConnectDB() {
 	if err != nil {
 		log.Fatalf("Erro ao realizar a migração dos modelos: %v", err)
 	}
+
+	SeedDatabase()
+
 	log.Println("Conexão com o banco de dados estabelecida com sucesso.")
 }
 
