@@ -29,7 +29,7 @@ func CreateComment(w http.ResponseWriter, r *http.Request) {
 func GetCommentsByBook(w http.ResponseWriter, r *http.Request) {
 	bookID, _ := strconv.Atoi(mux.Vars(r)["id"])
 	var comments []models.Comment
-	if result := db.DB.Where("book_id = ?", bookID).Preload("User").Find(&comments); result.Error != nil {
+	if result := db.DB.Where("book_id = ?", bookID).Find(&comments); result.Error != nil {
 		http.Error(w, "Could not fetch comments", http.StatusInternalServerError)
 		return
 	}

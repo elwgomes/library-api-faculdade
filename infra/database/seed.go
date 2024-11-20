@@ -62,7 +62,6 @@ func SeedDatabase() {
 	user := models.User{
 		Username:  "admin",
 		Password:  "admin123",
-		Role:      "librarian",
 		CreatedAt: time.Now(),
 		UpdatedAt: time.Now(),
 	}
