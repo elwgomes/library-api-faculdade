@@ -85,7 +85,7 @@ Para executar a aplicação em um ambiente completamente conteinerizado:
 3. Inicie todos os serviços:
 
    ```bash
-   docker-compose up --build
+   docker-compose up -d
    ```
 
 ## Diretrizes para Contribuição
@@ -94,8 +94,6 @@ Para executar a aplicação em um ambiente completamente conteinerizado:
 2. Crie um novo branch para sua funcionalidade ou correção de bug.
 3. Faça commit e push das suas alterações.
 4. Abra um pull request para revisão.
-
-
 
 ## Colaboradores
 
